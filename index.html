@@ -6,15 +6,61 @@
     <title>Little House Ventures</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Custom Styles */
         .hero {
             background: linear-gradient(135deg, #000000, #1c1c1c);
             color: white;
-            padding: 100px 0;
+            padding: 120px 0;
             text-align: center;
         }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+        .hero .btn-primary {
+            background: #007bff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .hero .btn-primary:hover {
+            background: #0056b3;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: #007bff;
+            margin-top: 8px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
         .card:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
         }
     </style>
 </head>
@@ -22,51 +68,69 @@
 
 <header class="hero">
     <div class="container">
-        <h1 class="display-3 fw-bold">Little House Ventures</h1>
-        <p class="lead">Redefining Growth. Amplifying Potential.</p>
-        <a href="#about" class="btn btn-primary btn-lg">Learn More</a>
+        <h1>Little House Ventures</h1>
+        <p>Investing in Tomorrow, Shaping Today</p>
+        <a href="#about" class="btn btn-primary mt-4">Learn More</a>
     </div>
 </header>
 
 <main class="container my-5">
-    <section id="about">
-        <h2 class="mb-4">About Us</h2>
-        <p>Little House Ventures is a forward-thinking investment firm dedicated to discovering innovative opportunities and driving success across industries.</p>
+    <!-- About Section -->
+    <section id="about" class="text-center my-5">
+        <h2 class="section-title">About Us</h2>
+        <p class="lead text-muted">
+            Little House Ventures is an innovative investment firm focused on empowering businesses to thrive and expand in dynamic markets. 
+            With a global outlook and deep expertise, we partner with founders to build extraordinary enterprises.
+        </p>
     </section>
 
-    <section id="services">
-        <h2 class="mb-4">Our Services</h2>
-        <div class="row g-4">
+    <!-- Services Section -->
+    <section id="services" class="my-5">
+        <h2 class="section-title text-center">Our Services</h2>
+        <div class="row text-center">
             <div class="col-md-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5 class="card-title">Private Equity</h5>
-                        <p class="card-text">Strategic investments to unlock business potential.</p>
-                    </div>
+                <div class="card shadow p-4">
+                    <img src="https://via.placeholder.com/150" alt="Service 1" class="card-img-top rounded-circle mx-auto mb-3" style="width: 100px;">
+                    <h5 class="card-title">Private Equity</h5>
+                    <p class="card-text text-muted">
+                        Unlocking value through tailored investments and operational excellence.
+                    </p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5 class="card-title">Venture Capital</h5>
-                        <p class="card-text">Empowering startups to scale and succeed.</p>
-                    </div>
+                <div class="card shadow p-4">
+                    <img src="https://via.placeholder.com/150" alt="Service 2" class="card-img-top rounded-circle mx-auto mb-3" style="width: 100px;">
+                    <h5 class="card-title">Venture Capital</h5>
+                    <p class="card-text text-muted">
+                        Partnering with startups to turn ideas into industry-leading companies.
+                    </p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5 class="card-title">Portfolio Management</h5>
-                        <p class="card-text">Optimizing growth through tailored strategies.</p>
-                    </div>
+                <div class="card shadow p-4">
+                    <img src="https://via.placeholder.com/150" alt="Service 3" class="card-img-top rounded-circle mx-auto mb-3" style="width: 100px;">
+                    <h5 class="card-title">Portfolio Management</h5>
+                    <p class="card-text text-muted">
+                        Optimizing performance and ensuring sustainable growth for investors.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 </main>
 
-<footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Little House Ventures. All rights reserved.</p>
+<!-- Call-to-Action Section -->
+<section class="text-center bg-light py-5">
+    <h2 class="section-title">Partner with Us</h2>
+    <p class="lead text-muted">
+        Let's build something extraordinary together. Reach out to explore opportunities.
+    </p>
+    <a href="#contact" class="btn btn-primary btn-lg mt-3">Get in Touch</a>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Little House Ventures. All Rights Reserved.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
