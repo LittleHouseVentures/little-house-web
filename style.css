@@ -95,6 +95,26 @@ section p {
     margin-top: 20px;
 }
 
+/* Section Title */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #e0e0e0; /* Light grey title */
+    text-align: center; /* Center the title text */
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #1d3c6d; /* Dark accent color */
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto; /* Center the accent line */
+}
+
 /* Subtle Hover for the Section */
 #confidentiality:hover {
     transform: translateY(-10px); /* Slight lift effect on hover */
