@@ -12,20 +12,38 @@ body {
 header {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(135deg, #000000, #1c1c1c);
+    background: linear-gradient(135deg, #000000, #1c1c1c); /* Dark gradient */
     color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+header .logo {
+    max-width: 250px;
+    margin-bottom: 20px;
 }
 
 header h1 {
     font-size: 3rem;
     font-weight: 700;
     margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
 }
 
 header p {
     font-size: 1.2rem;
     color: #ccc;
     margin-top: 10px;
+}
+
+/* Hero Section Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.hero {
+    animation: fadeIn 1.5s ease-out;
 }
 
 /* Main Content */
@@ -50,6 +68,31 @@ section h2 {
 section p {
     font-size: 1.1rem;
     color: #555;
+}
+
+/* Enhanced Service Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    background-color: #2b2b2b; /* Dark card background */
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Soft shadow for cards */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Stronger shadow on hover */
+}
+
+.card-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card-text {
+    color: #ccc;
 }
 
 /* List Style */
@@ -124,4 +167,43 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Gradient Buttons */
+.btn-primary {
+    background: linear-gradient(45deg, #1d3c6d, #0f2855);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #0f2855, #1d3c6d);
+}
+
+/* Sticky Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    z-index: 1000;
+}
+
+/* Social Media Icons */
+.social-links a {
+    color: #1d3c6d;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0f2855;
 }
