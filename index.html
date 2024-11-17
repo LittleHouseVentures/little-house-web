@@ -26,13 +26,13 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 200px; /* Initial height */
-            padding: 10px 0; /* Consistent padding */
+            height: 250px; /* Increased initial height */
+            padding: 20px 0; /* Consistent padding */
         }
         
         .fixed-header img {
-            max-height: 120px; /* Initial logo size */
-            transition: max-height 0.3s ease;
+            max-height: 150px; /* Increased initial logo size */
+            transition: max-height 0.3s ease, transform 0.3s ease;
         }
         
         .fixed-header.shrink {
@@ -42,6 +42,7 @@
         
         .fixed-header.shrink img {
             max-height: 60px; /* Shrunk logo size */
+            transform: translateY(10px); /* Move logo slightly downward */
         }
         
         /* Tagline */
@@ -58,7 +59,7 @@
         
         /* Prevent Overlap */
         body {
-            padding-top: 200px; /* Matches initial header height */
+            padding-top: 250px; /* Matches initial header height */
         }
         
         .fixed-header.shrink ~ main {
@@ -278,7 +279,7 @@
         const tagline = document.querySelector('.tagline');
         const logo = document.querySelector('.fixed-header img');
 
-        let initialHeaderHeight = 200; // Initial header height
+        let initialHeaderHeight = 250; // Increased initial header height
         let shrunkHeaderHeight = 80; // Shrunk header height
 
         // Dynamically adjust body padding to match header height
