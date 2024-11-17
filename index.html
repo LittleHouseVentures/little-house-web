@@ -20,32 +20,32 @@
             width: 100%;
             background: #000;
             z-index: 1000;
-            padding: 30px 0; /* Large padding for initial state */
             text-align: center;
             transition: all 0.3s ease-in-out;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            height: 200px; /* Initial header height */
         }
         
         .fixed-header img {
-            max-height: 150px; /* Larger initial logo size */
+            max-height: 120px; /* Initial logo size */
             transition: all 0.3s ease-in-out;
         }
         
         .fixed-header.shrink {
-            padding: 10px 0; /* Reduced padding for shrunk version */
-            height: 80px; /* Set fixed height for the banner */
+            height: 80px; /* Shrunk header height */
         }
         
         .fixed-header.shrink img {
             max-height: 60px; /* Shrunk logo size */
         }
         
+        /* Tagline */
         .tagline {
-            margin: 10px 0 0;
-            font-size: 1.5rem; /* Larger tagline font */
+            margin: 5px 0 0;
+            font-size: 1.5rem;
             transition: opacity 0.3s ease-in-out;
         }
         
@@ -54,13 +54,13 @@
             visibility: hidden;
         }
         
-        /* Push content below the initial banner height */
+        /* Prevent overlap with body content */
         body {
-            margin-top: 200px; /* Matches the initial banner size */
+            margin-top: 200px; /* Match initial header height */
         }
         
         .fixed-header.shrink ~ main {
-            margin-top: 80px; /* Matches the shrunk banner size */
+            margin-top: 80px; /* Match shrunk header height */
         }
         
         /* Hero Section */
