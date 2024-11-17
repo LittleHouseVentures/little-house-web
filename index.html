@@ -20,33 +20,42 @@
             width: 100%;
             background: #000;
             z-index: 1000;
-            padding: 20px 0;
+            padding: 30px 0; /* Larger initial padding */
             text-align: center;
             transition: all 0.3s ease-in-out;
         }
         
         .fixed-header img {
-            max-height: 120px; /* Initial large size */
+            max-height: 150px; /* Larger initial logo size */
             transition: all 0.3s ease-in-out;
         }
         
         .fixed-header.shrink {
-            padding: 10px 0;
+            padding: 0; /* Remove padding to eliminate blank space */
         }
         
         .fixed-header.shrink img {
-            max-height: 50px; /* Smaller size on scroll */
+            max-height: 80px; /* Larger shrunk logo size */
         }
         
         .tagline {
             margin: 10px 0 0;
-            font-size: 1.2rem;
+            font-size: 1.5rem; /* Larger tagline font */
             transition: opacity 0.3s ease-in-out;
         }
         
         .tagline.hide {
             opacity: 0;
             visibility: hidden;
+        }
+        
+        /* Prevent banner from overlapping the first section */
+        body {
+            margin-top: 180px; /* Push the body content down to avoid overlap */
+        }
+        
+        .fixed-header.shrink ~ main {
+            margin-top: 100px; /* Adjust margin when banner shrinks */
         }
         
         /* Hero Section */
@@ -137,7 +146,6 @@
 
 <header class="fixed-header">
     <div class="container">
-        <!-- Logo Section -->
         <img src="img/logo.png" alt="Little House Ventures Logo" class="img-fluid">
         <p class="tagline">Investing in Tomorrow, Shaping Today</p>
     </div>
@@ -258,7 +266,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    // JavaScript for shrinking the header and hiding the tagline on scroll
     window.addEventListener('scroll', function () {
         const header = document.querySelector('.fixed-header');
         const tagline = document.querySelector('.tagline');
