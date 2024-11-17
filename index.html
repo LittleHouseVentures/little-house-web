@@ -20,9 +20,13 @@
             width: 100%;
             background: #000;
             z-index: 1000;
-            padding: 30px 0; /* Larger initial padding */
+            padding: 30px 0; /* Large padding for initial state */
             text-align: center;
             transition: all 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         
         .fixed-header img {
@@ -31,11 +35,12 @@
         }
         
         .fixed-header.shrink {
-            padding: 0; /* Remove padding to eliminate blank space */
+            padding: 10px 0; /* Reduced padding for shrunk version */
+            height: 80px; /* Set fixed height for the banner */
         }
         
         .fixed-header.shrink img {
-            max-height: 80px; /* Larger shrunk logo size */
+            max-height: 60px; /* Shrunk logo size */
         }
         
         .tagline {
@@ -49,13 +54,13 @@
             visibility: hidden;
         }
         
-        /* Prevent banner from overlapping the first section */
+        /* Push content below the initial banner height */
         body {
-            margin-top: 180px; /* Push the body content down to avoid overlap */
+            margin-top: 200px; /* Matches the initial banner size */
         }
         
         .fixed-header.shrink ~ main {
-            margin-top: 100px; /* Adjust margin when banner shrinks */
+            margin-top: 80px; /* Matches the shrunk banner size */
         }
         
         /* Hero Section */
